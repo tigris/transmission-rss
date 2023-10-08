@@ -7,7 +7,7 @@
 # docker push nning2/transmission-rss:v1.2.3
 
 FROM alpine:3 as builder
-RUN apk add gcc libc-dev make ruby-dev
+RUN apk add gcc libc-dev make ruby-dev linux-headers
 COPY . /tmp
 WORKDIR /tmp
 RUN gem build transmission-rss.gemspec
